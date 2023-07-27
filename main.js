@@ -38,21 +38,29 @@ document.body.innerText = JSON.stringify({ address, age, nickname });
 */
 
 /*==  Desestruturação com função
-
+/*
 function mostraIdade(user){
   return user.idade;
 }
 
 document.body.innerText = mostraIdade(user);
-
+*/
 //forma desestruturada
-
+/*
 function mostraIdade({ idade }) {
   return idade;
 }
-
-document.body.innerText = mostraIdade(user);
 */
+//document.body.innerText = mostraIdade(user);
 
 
-//REST OPERATOR
+
+//=== REST OPERATOR
+//const { name, idade, ...rest } = user;
+//document.body.innerText = JSON.stringify(rest);
+
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const [first, , third, ...rest] = array;   //salteou o 2
+document.body.innerText = JSON.stringify({first, third, rest});
+
