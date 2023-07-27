@@ -83,7 +83,7 @@ document.body.innerText = JSON.stringify(user);
 // ===MÉTODOS DE ARRAY 
 //Alguns métodos para percorrer array
 
-const array = [1, 2, 3, 4, 5];
+//const array = [1, 2, 3, 4, 5];
 
 // for (const i of array){
 //   document.body.innerText += i;
@@ -95,19 +95,72 @@ const array = [1, 2, 3, 4, 5];
 //   novoArray.push(item * 2);
 // })
 
-//O map() sempre retorna o mesmo tamanho do vetor original
-//utilizado para transformar um array em outro, porém mudando as informações
-// const novoArray = array.map(item => {
-//   if (item % 2 === 0) {
-//     return item * 10;
-//   }
+//==== MAP
+/*O map() sempre retorna o mesmo tamanho do vetor original
+utilizado para transformar um array em outro, porém mudando as informações
+const novoArray = array.map(item => {
+  if (item % 2 === 0) {
+    return item * 10;
+  }
 
-//   return item;
-// })
+  return item;
+})
 
-// document.body.innerText = JSON.stringify(novoArray);
-
+document.body.innerText = JSON.stringify(novoArray);
+*/
 
 // map, filter, every, some, find, findIndex, reduce
+
+// ==== FILTER
+/* const array = [1, 2, 3, 4, 5];
+
+const novoArray =  array
+    .filter( item => item % 2 ===0 )
+    .map(item => item * 10);
+
+document.body.innerText = JSON.stringify(novoArray);
+*/
+
+//==== EVERY - retorna 'true'(se TODOS os itens passarem na condição) ou 'false'
+/*
+const todosItensSaoNumeros = array.every(item => {
+  return typeof item === 'number'});
+
+document.body.innerText = JSON.stringify(todosItensSaoNumeros);
+*/
+
+//==== SOME - retorna 'true'( se pelo menos um item satisfaz a condição) ou 'false'
+/*const array = [1, 2, 3, 4, 5, 'teste'];
+
+const peloMenosUmItemnaoEUmNumero = array.some(item => {
+  return typeof item !== 'number';
+})
+document.body.innerText = JSON.stringify(peloMenosUmItemnaoEUmNumero);
+*/
+
+
+//=== FIND - Retorna o valor no array
+/*
+const array = [1, 2, 3, 4, 5, 'teste'];
+
+const par = array.find(item => {
+  return item % 2 === 0;
+})
+
+document.body.innerText = JSON.stringify(par);
+*/
+
+//=== FINDINDEX - Retorna o índice do valor no array
+/*const array = [1, 2, 3, 4, 5, 'teste'];
+
+const parIndice = array.findIndex(item => {
+  return item % 2 === 0;
+})
+
+document.body.innerText = JSON.stringify(parIndice);
+*/
+
+// === REDUCE - 
+
 
 
