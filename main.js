@@ -6,7 +6,7 @@ const idade = 0;
 document.body.innerText = "Sua idade é: " + (idade ?? "Nâo informado");
 */
 
-//OBJETOS
+/*OBJETOS
 
 const user = {
   name: "Dara",
@@ -16,6 +16,7 @@ const user = {
     number: 174,
   },
 };
+*/
 
 /* Manipulação
 document.body.innerText = ('name' in user);   //true
@@ -53,9 +54,7 @@ function mostraIdade({ idade }) {
 */
 //document.body.innerText = mostraIdade(user);
 
-
-
-//=== REST OPERATOR
+/*== REST OPERATOR
 //const { name, idade, ...rest } = user;
 //document.body.innerText = JSON.stringify(rest);
 
@@ -63,4 +62,52 @@ function mostraIdade({ idade }) {
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const [first, , third, ...rest] = array;   //salteou o 2
 document.body.innerText = JSON.stringify({first, third, rest});
+*/
+
+/*
+== SHOT SYNTAX
+  const name = 'Dara';
+  const age = 26;
+
+  const user = {
+    name,
+    age,
+  };
+
+document.body.innerText = JSON.stringify(user);
+*/
+
+// == OPTIONAL CHAINING
+
+
+// ===MÉTODOS DE ARRAY 
+//Alguns métodos para percorrer array
+
+const array = [1, 2, 3, 4, 5];
+
+// for (const i of array){
+//   document.body.innerText += i;
+// }
+
+
+// const novoArray = [];
+// array.forEach(item => {
+//   novoArray.push(item * 2);
+// })
+
+//O map() sempre retorna o mesmo tamanho do vetor original
+//utilizado para transformar um array em outro, porém mudando as informações
+// const novoArray = array.map(item => {
+//   if (item % 2 === 0) {
+//     return item * 10;
+//   }
+
+//   return item;
+// })
+
+// document.body.innerText = JSON.stringify(novoArray);
+
+
+// map, filter, every, some, find, findIndex, reduce
+
 
