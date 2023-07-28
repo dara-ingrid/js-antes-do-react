@@ -1,5 +1,5 @@
 import { soma, subtracao, PI } from "./lib/math";
-import sum from './lib/sum'
+import { sum } from './lib/sum'
 
 //Named export
 console.log(soma(1, 3))
