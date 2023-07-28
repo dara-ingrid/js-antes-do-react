@@ -1,11 +1,5 @@
-import { soma, subtracao, PI } from "./lib/math";
-import { sum } from './lib/sum'
+import * as math from './lib/math'
 
-//Named export
-console.log(soma(1, 3))
-console.log(subtracao(4, 2))
-console.log(PI)
+//console.log(math) // Retorna todas as funções do arquivo math
+console.log(math.soma(4, 5))
 
-//Default export - Declara a função em outro arquivo como defalt, +
-//+ e pode importar aqui sem precisar colocar entre chaves, e com outro nome.
-console.log(sum(3, 3))
