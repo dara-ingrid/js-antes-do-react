@@ -160,7 +160,19 @@ const parIndice = array.findIndex(item => {
 document.body.innerText = JSON.stringify(parIndice);
 */
 
-// === REDUCE - 
+// === REDUCE - Utilizar um array e criar uma nova estrutura de dados com base nesse array
+const array = [1, 2, 3, 4, 5];
 
+// acc => accumulatorn, é objeto que está criando
+// item => cada infomrmação do array
+
+const soma = array.reduce( (acc, item ) => {
+  //document.body.innerText += acc + ' , ' + item + '--'
+  
+  return acc + item;
+}, 0)
+
+
+document.body.innerText = JSON.stringify('Soma:' + soma);
 
 
