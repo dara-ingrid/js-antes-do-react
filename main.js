@@ -1,5 +1,5 @@
-import * as math from './lib/math'
+import { soma } from './lib/sum'
 
-//console.log(math) // Retorna todas as funções do arquivo math
-console.log(math.soma(4, 5))
+//importando a função soma do arquivo sum.js
+console.log(soma(5, 5))
 
