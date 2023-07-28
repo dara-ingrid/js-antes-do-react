@@ -184,3 +184,22 @@ const message = `Bem vinda, ${name ? name : 'Visitante'}!`;
 document.body.innerText = message;
 */
 
+//=== PROMISES
+/**
+ * .then/ .catch/
+ */
+const somaDoisNumeros = (a, b) => {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        reject(a + b);   //resolve(a + b); 
+      }, 2000);
+  });
+}
+
+somaDoisNumeros(1, 4)
+      .then (soma => {
+        document.body.innerText = soma
+      })
+      .catch(err => {
+        console.log(err)
+      })
