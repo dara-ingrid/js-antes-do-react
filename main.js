@@ -161,7 +161,7 @@ document.body.innerText = JSON.stringify(parIndice);
 */
 
 // === REDUCE - Utilizar um array e criar uma nova estrutura de dados com base nesse array
-const array = [1, 2, 3, 4, 5];
+/*const array = [1, 2, 3, 4, 5];
 
 // acc => accumulatorn, é objeto que está criando
 // item => cada infomrmação do array
@@ -174,5 +174,13 @@ const soma = array.reduce( (acc, item ) => {
 
 
 document.body.innerText = JSON.stringify('Soma:' + soma);
+*/
 
+//=== TEMPLATE LITERALS=>>  `${ }`
+/* 
+const name = 'Dara';
+const message = `Bem vinda, ${name ? name : 'Visitante'}!`;
+
+document.body.innerText = message;
+*/
 
