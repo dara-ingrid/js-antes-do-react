@@ -185,9 +185,9 @@ document.body.innerText = message;
 */
 
 //=== PROMISES
-/**
+/** Exemplo Soma dois números
  * .then/ .catch/
- */
+
 const somaDoisNumeros = (a, b) => {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -203,3 +203,50 @@ somaDoisNumeros(1, 4)
       .catch(err => {
         console.log(err)
       })
+      
+*/
+
+/** Exemplo acessando API
+ */
+
+//Forma 1 de usar
+// fetch('http://api.github.com/users/dara-ingrid')
+//       .then( response => {
+//         return response.json();
+//       })
+//       .then(body => {
+//         console.log(body);
+//       })
+//       .catch(err => {
+//         console.log(err)
+//       })
+//       .finally (() => { ///Vai executar independente se a promisse deu certo ou não
+//         console.log('Deu')
+//       })
+
+//Usando sintaxe de async e await
+async function buscaDadosNoGithub() {
+  try {
+    const response = await fetch('http://api.github.com/users/dara-ingrid');
+    const body = await response.json();
+
+    return body.name;
+  } catch (err) {
+    console.log(err);
+  } finally {
+    console.log('Deu bom');
+  }
+}
+
+//buscaDadosNoGithub();
+
+const nome = buscaDadosNoGithub();
+console.log(nome);
+
+//Toda função assincrona vira uma Promise automaticamente
+//Para buscar o nome do usuário agora tem que ser dessa forma
+
+buscaDadosNoGithub().then(name => {
+  console.log(name);
+})
+
